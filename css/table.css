@@ -1,0 +1,284 @@
+/*=====================================================
+  DICT IMS - TABLES
+=====================================================*/
+
+/* ==========================
+   DEFAULT TABLE
+========================== */
+
+.table-responsive{
+    width:100%;
+    overflow-x:auto;
+    border-radius:16px;
+}
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.table thead{
+    background:var(--primary);
+}
+
+.table thead th{
+    color:#fff;
+    padding:16px 18px;
+    text-align:left;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.table tbody td{
+    padding:15px 18px;
+    border-bottom:1px solid var(--border);
+    font-size:14px;
+    color:var(--text);
+    vertical-align:middle;
+}
+
+.table tbody tr{
+    transition:.25s;
+}
+
+.table tbody tr:hover{
+    background:#f8fafc;
+}
+
+.table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+
+/* ==========================
+   COMPACT TABLE
+========================== */
+
+.table-sm th,
+.table-sm td{
+    padding:12px 14px;
+    font-size:13px;
+}
+
+
+/* ==========================
+   STRIPED TABLE
+========================== */
+
+.table-striped tbody tr:nth-child(even){
+    background:#fafbfc;
+}
+
+
+/* ==========================
+   HOVER TABLE
+========================== */
+
+.table-hover tbody tr:hover{
+    background:#fff7f3;
+}
+
+
+/* ==========================
+   CENTER TABLE
+========================== */
+
+.table-center th,
+.table-center td{
+    text-align:center;
+}
+
+
+/* ==========================
+   ACTION COLUMN
+========================== */
+
+.table-actions{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+
+/* ==========================
+   IMAGE COLUMN
+========================== */
+
+.table-image{
+    width:70px;
+}
+
+.table-image img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid var(--border);
+}
+
+
+/* ==========================
+   STATUS BADGES
+========================== */
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* Equipment */
+
+.status.available{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.status.borrowed{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.status.under-repair{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.status.unserviceable{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+.status.disposed{
+    background:#e5e7eb;
+    color:#374151;
+}
+
+/* Borrowing */
+
+.status.pending{
+    background:#fff7d6;
+    color:#9a6700;
+}
+
+.status.approved{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.status.returned{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.status.completed{
+    background:#d1fae5;
+    color:#065f46;
+}
+
+.status.rejected{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+.status.lost{
+    background:#fecaca;
+    color:#991b1b;
+}
+
+.status.damaged{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+
+/* ==========================
+   TABLE FOOTER
+========================== */
+
+.table-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    gap:15px;
+}
+
+.table-info{
+    color:var(--muted);
+    font-size:14px;
+}
+
+
+/* ==========================
+   PAGINATION
+========================== */
+
+.pagination{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.pagination button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    background:#fff;
+    border:1px solid var(--border);
+    cursor:pointer;
+    transition:.25s;
+}
+
+.pagination button:hover{
+    background:var(--secondary);
+    color:#fff;
+}
+
+.pagination button.active{
+    background:var(--secondary);
+    color:#fff;
+}
+
+
+/* ==========================
+   EMPTY TABLE
+========================== */
+
+.table-empty{
+    padding:50px 20px;
+    text-align:center;
+    color:var(--muted);
+    font-size:15px;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+    .table{
+        min-width:900px;
+    }
+
+    .table-footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+

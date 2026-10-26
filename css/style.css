@@ -1,0 +1,26 @@
+/* Google Font should remain in HTML */
+
+/* Core */
+@import url("base.css");
+@import url("layout.css");
+@import url("sidebar.css");
+@import url("topbar.css");
+
+/* Shared */
+@import url("buttons.css");
+@import url("cards.css");
+@import url("forms.css");
+@import url("table.css");
+@import url("modal.css");
+@import url("utilities.css");
+
+/* Pages */
+@import url("dashboard.css");
+@import url("users.css");
+@import url("personnel.css");
+@import url("articles.css");
+@import url("inventory.css");
+@import url("borrowing.css");
+@import url("gallery.css");
+@import url("reports.css");
+@import url("settings.css");

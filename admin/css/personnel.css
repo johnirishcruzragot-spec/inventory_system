@@ -1,0 +1,485 @@
+/*=====================================================
+  PERSONNEL.CSS
+  DICT Inventory Management System
+======================================================*/
+
+/* ==========================================
+   PERSONNEL PAGE
+========================================== */
+
+#personnel{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.personnel-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+}
+
+.personnel-header h2{
+    font-size:30px;
+    color:#101820;
+}
+
+.personnel-header p{
+    margin-top:6px;
+    color:#6b7280;
+}
+
+.section-label{
+    display:inline-block;
+    padding:6px 15px;
+    border-radius:20px;
+    background:#fff3ec;
+    color:#e94804;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.add-personnel-btn,
+.add-equipment-btn{
+    background:#101820;
+    color:#fff;
+    border:none;
+    padding:13px 24px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.add-personnel-btn:hover,
+.add-equipment-btn:hover{
+    background:#e94804;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
+.personnel-tools{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+}
+
+.personnel-tools input{
+    width:320px;
+    padding:13px 15px;
+    border:1px solid #d7dde7;
+    border-radius:10px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.personnel-tools input:focus{
+    outline:none;
+    border-color:#e94804;
+    box-shadow:0 0 0 4px rgba(233,72,4,.12);
+}
+
+/* ==========================================
+   PERSONNEL TABS
+========================================== */
+
+.personnel-tabs{
+    display:flex;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.tab-btn{
+    border:none;
+    background:#eef2f7;
+    color:#101820;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.tab-btn:hover{
+    background:#dbe4ee;
+}
+
+.tab-btn.active{
+    background:#101820;
+    color:#fff;
+}
+
+/* ==========================================
+   PERSONNEL TABLE
+========================================== */
+
+.personnel-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.personnel-table thead{
+    background:#101820;
+    color:#fff;
+}
+
+.personnel-table th{
+    padding:16px;
+    text-align:left;
+    font-size:14px;
+    font-weight:600;
+}
+
+.personnel-table td{
+    padding:16px;
+    border-bottom:1px solid #edf2f7;
+    font-size:14px;
+}
+
+.personnel-table tbody tr{
+    transition:.25s;
+}
+
+.personnel-table tbody tr:hover{
+    background:#fff8f4;
+}
+
+/* ==========================================
+   EMPLOYMENT STATUS
+========================================== */
+
+.status{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.status.permanent{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.status.contractual{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.status.cos{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.status.job-order,
+.status.job.order{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.view-btn,
+.edit-btn,
+.delete-btn,
+.restore-btn{
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.view-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.view-btn:hover{
+    background:#1d4ed8;
+}
+
+.edit-btn{
+    background:#101820;
+    color:#fff;
+}
+
+.edit-btn:hover{
+    background:#243746;
+}
+
+.delete-btn{
+    background:#e94804;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    background:#c73d00;
+}
+
+.restore-btn{
+    background:#16a34a;
+    color:#fff;
+}
+
+.restore-btn:hover{
+    background:#15803d;
+}
+
+/* ==========================================
+   PERSONNEL DETAILS
+========================================== */
+
+.personnel-details-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.personnel-profile{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.personnel-profile h3{
+    font-size:14px;
+    color:#6b7280;
+    margin-top:15px;
+}
+
+.personnel-profile p{
+    font-size:18px;
+    color:#101820;
+    margin-top:5px;
+}
+
+.equipment-list{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   DESIGNATION TABLE
+========================================== */
+
+#designationTable{
+    width:100%;
+    border-collapse:collapse;
+}
+
+#designationTable thead{
+    background:#101820;
+    color:#fff;
+}
+
+#designationTable th,
+#designationTable td{
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid #ececec;
+}
+
+#designationTable tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-content{
+    width:900px;
+    max-width:95%;
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:translateY(-25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.modal-header h3{
+    color:#101820;
+}
+
+.close{
+    font-size:32px;
+    cursor:pointer;
+    color:#666;
+    transition:.3s;
+}
+
+.close:hover{
+    color:#e94804;
+}
+
+.modal-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.modal-grid .form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.modal-grid label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.modal-grid input,
+.modal-grid select,
+.modal-grid textarea{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:14px;
+}
+
+.modal-grid input:focus,
+.modal-grid select:focus,
+.modal-grid textarea:focus{
+    outline:none;
+    border-color:#e94804;
+    box-shadow:0 0 0 4px rgba(233,72,4,.12);
+}
+
+.modal-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #e5e7eb;
+}
+
+.save-btn{
+    background:#101820;
+    color:#fff;
+    border:none;
+    padding:13px 28px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#e94804;
+}
+
+.cancel-btn{
+    background:#f3f4f6;
+    color:#374151;
+    border:1px solid #d1d5db;
+    padding:13px 28px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.cancel-btn:hover{
+    background:#e5e7eb;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .personnel-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .personnel-tools{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .personnel-tools input{
+        width:100%;
+    }
+
+    .personnel-tabs{
+        flex-wrap:wrap;
+    }
+
+    .modal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .personnel-table,
+    #designationTable{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}

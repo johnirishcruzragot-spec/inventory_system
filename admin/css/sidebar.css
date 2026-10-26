@@ -1,0 +1,258 @@
+/*=====================================================
+  DICT IMS
+  SIDEBAR CSS
+=====================================================*/
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:260px;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:25px;
+
+    background:var(--primary);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+    z-index:1100;
+}
+
+/* ==========================
+   COLLAPSED SIDEBAR
+========================== */
+
+.sidebar.collapsed{
+    width:80px;
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:30px;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:12px;
+
+    background:var(--secondary);
+
+    color:#fff;
+    font-size:22px;
+}
+
+.logo-text{
+    transition:var(--transition);
+}
+
+.logo h2{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    margin:0;
+}
+
+.logo p{
+    margin-top:4px;
+    color:rgba(255,255,255,.70);
+    font-size:12px;
+}
+
+/* ==========================
+   WORKSPACE
+========================== */
+
+.workspace{
+    margin-bottom:30px;
+
+    padding:15px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:15px;
+}
+
+.workspace small{
+    color:#d1d5db;
+}
+
+.workspace h4{
+    margin-top:6px;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.sidebar ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.sidebar li{
+    margin-bottom:6px;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:13px 15px;
+
+    border-radius:14px;
+
+    color:#d7dde7;
+    text-decoration:none;
+
+    transition:var(--transition);
+}
+
+.sidebar a:hover{
+    background:#24314c;
+    color:#fff;
+}
+
+.sidebar a.active{
+    background:rgba(233,72,4,.15);
+    border-left:4px solid var(--secondary);
+
+    color:#fff;
+}
+
+.menu{
+    transition:.25s;
+}
+
+.menu:hover{
+    background:#182632;
+    color:#fff;
+    transform:translateX(6px);
+}
+
+.menu.active{
+    background:linear-gradient(
+        90deg,
+        #e94804,
+        #ff6b2c
+    );
+
+    color:#fff;
+
+    border-left:none;
+
+    box-shadow:0 12px 30px rgba(233,72,4,.35);
+}
+
+.menu.active span{
+    transform:scale(1.1);
+}
+
+/* ==========================
+   ICONS & TEXT
+========================== */
+
+.icon{
+    width:22px;
+    text-align:center;
+    font-size:18px;
+    flex-shrink:0;
+}
+
+.text{
+    white-space:nowrap;
+}
+
+/* ==========================
+   SIDEBAR BOTTOM
+========================== */
+
+.sidebar-bottom{
+    margin-top:auto;
+}
+
+.logout{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+/* ==========================
+   COLLAPSED STATE
+========================== */
+
+.sidebar.collapsed .logo{
+    justify-content:center;
+}
+
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .workspace,
+.sidebar.collapsed .text{
+    display:none;
+}
+
+.sidebar.collapsed .logo-icon{
+    margin:0;
+}
+
+.sidebar.collapsed ul a{
+    justify-content:center;
+    padding:15px 0;
+}
+
+.sidebar.collapsed .icon{
+    margin:0;
+    font-size:20px;
+}
+
+.sidebar.collapsed .sidebar-bottom{
+    display:flex;
+    justify-content:center;
+}
+
+.sidebar.collapsed .logout .text{
+    display:none;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .sidebar{
+        transform:translateX(-100%);
+    }
+
+    .sidebar.active{
+        transform:translateX(0);
+    }
+
+}

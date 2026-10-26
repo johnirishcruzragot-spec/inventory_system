@@ -1,0 +1,527 @@
+/*=====================================================
+  MODAL COMPONENT
+=====================================================*/
+
+/* ===========================
+   MODAL OVERLAY
+=========================== */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,.45);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    padding:20px;
+}
+
+/* Active Modal */
+
+.modal.show{
+    display:flex;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,.45);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    padding:20px;
+
+    overflow:auto;
+}
+
+.modal.show{
+    display:flex !important;
+}
+
+/* ===========================
+   MODAL CONTENT
+=========================== */
+
+.modal-content{
+    width:900px;
+    max-width:95%;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+    position:relative;
+
+    margin:auto;
+
+    flex:0 0 auto;
+}
+
+/* Sizes */
+
+.modal-sm{
+    width:420px;
+}
+
+.modal-md{
+    width:650px;
+}
+
+.modal-lg{
+    width:900px;
+}
+
+.modal-xl{
+    width:1100px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.modal .modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 25px;
+    background:#101820;
+    border-bottom:1px solid #ececec;
+}
+
+.modal .modal-header h2,
+.modal .modal-header h3{
+    margin:0;
+    color:#efeeee;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close{
+
+    font-size:30px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.close:hover{
+
+    color:#e94804;
+    transform:rotate(90deg);
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+.modal-body{
+
+    padding:25px;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.modal-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+/* Full Width */
+
+.modal-grid .full{
+    grid-column:1 / -1;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.modal-footer,
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+    align-items:center;
+
+    gap:15px;
+
+    padding:20px 25px;
+
+    border-top:1px solid #ececec;
+
+    background:#fafafa;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.modal-footer button,
+.modal-buttons button{
+
+    min-width:120px;
+}
+
+/* ===========================
+   SCROLLABLE BODY
+=========================== */
+
+.modal-scroll{
+
+    max-height:70vh;
+    overflow-y:auto;
+}
+
+.modal-scroll::-webkit-scrollbar{
+    width:8px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:20px;
+}
+
+/* ===========================
+   IMAGE PREVIEW
+=========================== */
+
+.modal-preview{
+
+    width:100%;
+    height:220px;
+
+    border:2px dashed #d1d5db;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#f8fafc;
+}
+
+.modal-preview img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* ===========================
+   DELETE MODAL
+=========================== */
+
+.delete-modal{
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.delete-modal i{
+
+    font-size:60px;
+
+    color:#dc2626;
+
+    margin-bottom:20px;
+}
+
+.delete-modal h3{
+
+    color:#101820;
+
+    margin-bottom:15px;
+}
+
+.delete-modal p{
+
+    color:#6b7280;
+
+    line-height:1.7;
+}
+
+/* ===========================
+   LOADING MODAL
+=========================== */
+
+.modal-loading{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:40px;
+}
+
+.modal-loading .spinner{
+
+    width:50px;
+    height:50px;
+
+    border:5px solid #eee;
+    border-top:5px solid #e94804;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin-bottom:20px;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes modalFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-25px) scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .modal{
+        padding:15px;
+    }
+
+    .modal-content{
+
+        width:100%;
+        max-height:95vh;
+    }
+
+    .modal-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .modal-footer,
+    .modal-buttons{
+
+        flex-direction:column-reverse;
+    }
+
+    .modal-footer button,
+    .modal-buttons button{
+
+        width:100%;
+    }
+
+}
+
+/* =====================================
+   ARTICLE MODAL PAGES
+===================================== */
+
+.modal-page{
+    display:none;
+    animation:fadePage .25s ease;
+}
+
+.modal-page.active{
+    display:block;
+}
+
+/* =====================================
+   REVIEW TABLE
+===================================== */
+
+.review-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+.review-table th,
+.review-table td{
+    padding:12px 15px;
+    border-bottom:1px solid #ececec;
+    text-align:left;
+    font-size:14px;
+}
+
+.review-table th{
+    width:180px;
+    background:#f7f8fa;
+    color:#101820;
+    font-weight:600;
+}
+
+/* =====================================
+   PAGE BUTTONS
+===================================== */
+
+.prev-btn,
+.next-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.prev-btn{
+    background:#6c757d;
+    color:#fff;
+}
+
+.next-btn{
+    background:#101820;
+    color:#fff;
+}
+
+.prev-btn:hover{
+    background:#5a6268;
+}
+
+.next-btn:hover{
+    background:#e94804;
+}
+
+/* =====================================
+   PAGE INDICATOR
+===================================== */
+
+.page-indicator{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.page-indicator span{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#d9d9d9;
+    transition:.25s;
+}
+
+.page-indicator span.active{
+    background:#e94804;
+}
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+@keyframes fadePage{
+
+    from{
+        opacity:0;
+        transform:translateX(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* ===========================
+   MODAL PAGES
+=========================== */
+
+.modal-page{
+    display:none;
+}
+
+.modal-page.active{
+    display:block;
+}
+
+/* Grid inside each page */
+
+.modal-page .modal-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+}
+
+/* Full width fields */
+
+.modal-page .form-group.full-width{
+    grid-column:1 / -1;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .modal-page .modal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .modal-page .form-group.full-width{
+        grid-column:auto;
+    }
+
+}

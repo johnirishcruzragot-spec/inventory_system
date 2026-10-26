@@ -1,0 +1,236 @@
+/*=====================================================
+  DICT IMS
+  TOPBAR CSS
+=====================================================*/
+
+/* ==========================
+   TOPBAR
+========================== */
+
+.topbar{
+    position:fixed;
+    top:20px;
+    left:280px;
+    right:20px;
+
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+    padding:0 25px;
+
+    background:var(--white);
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    z-index:1000;
+
+    transition:var(--transition);
+}
+
+/* ==========================
+   SIDEBAR COLLAPSED
+========================== */
+
+.sidebar.collapsed ~ .main .topbar{
+    left:100px;
+}
+
+/* ==========================
+   BREADCRUMB
+========================== */
+
+.breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    flex:1;
+
+    margin-left:15px;
+
+    font-size:14px;
+    color:var(--muted);
+}
+
+.breadcrumb strong{
+    color:var(--primary);
+    font-weight:700;
+}
+
+/* ==========================
+   RIGHT SECTION
+========================== */
+
+.top-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* ==========================
+   ICON BUTTONS
+========================== */
+
+.top-icons button{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:12px;
+
+    background:#f7f8fb;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:var(--transition);
+}
+
+.top-icons button:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* ==========================
+   HAMBURGER BUTTON
+========================== */
+
+.hamburger{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:var(--secondary);
+    color:#fff;
+
+    font-size:24px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+    transition:var(--transition);
+}
+
+.hamburger:hover{
+    background:#c73d00;
+    transform:scale(1.05);
+}
+
+.hamburger:active{
+    transform:scale(.95);
+}
+
+.hamburger.closed{
+    background:var(--primary);
+}
+
+/* ==========================
+   DATE
+========================== */
+
+.date{
+    display:flex;
+    align-items:center;
+
+    padding:10px 18px;
+
+    background:#f7f8fb;
+
+    border-radius:12px;
+
+    color:#666;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ==========================
+   PROFILE
+========================== */
+
+.profile{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-size:18px;
+    font-weight:700;
+
+    user-select:none;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:992px){
+
+    .topbar{
+        left:20px;
+        right:20px;
+    }
+
+    .sidebar.collapsed ~ .main .topbar{
+        left:20px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .topbar{
+        height:auto;
+
+        flex-wrap:wrap;
+
+        padding:15px 20px;
+
+        gap:15px;
+    }
+
+    .breadcrumb{
+        margin-left:0;
+        width:100%;
+    }
+
+    .top-icons{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+    .date{
+        display:none;
+    }
+
+}

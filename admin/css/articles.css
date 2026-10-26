@@ -1,0 +1,408 @@
+/*=====================================================
+  ARTICLES.CSS
+  DICT Inventory Management System
+======================================================*/
+
+/* ==========================================
+   ARTICLE PAGE
+========================================== */
+
+#article{
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.article-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:20px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.article-header h2{
+    font-size:30px;
+    color:#101820;
+    margin-top:5px;
+}
+
+.article-header p{
+    margin-top:6px;
+    color:#6b7280;
+}
+
+.section-label{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:30px;
+    background:#101820;
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.article-grid{
+    display:block;
+    width:100%;
+}
+
+.article-card{
+    width:100%;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    border-bottom:1px solid #ececec;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.card-header h3{
+    margin:0;
+    color:#101820;
+    font-size:18px;
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+#searchArticle{
+    width:260px;
+    padding:11px 15px;
+    border:1px solid #dcdcdc;
+    border-radius:10px;
+    font-size:14px;
+    transition:.3s;
+}
+
+#searchArticle:focus{
+    outline:none;
+    border-color:#e94804;
+    box-shadow:0 0 0 4px rgba(233,72,4,.12);
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.article-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.article-table thead{
+    background:#101820;
+}
+
+.article-table thead th{
+    color:#fff;
+    padding:15px;
+    text-align:left;
+    font-size:14px;
+    font-weight:600;
+}
+
+.article-table td{
+    padding:15px;
+    border-bottom:1px solid #ececec;
+    font-size:14px;
+    color:#444;
+    vertical-align:middle;
+}
+
+.article-table tbody tr{
+    transition:.25s;
+}
+
+.article-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* ==========================================
+   CATEGORY BADGE
+========================================== */
+
+.category-badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:30px;
+    background:#eef4ff;
+    color:#0d47a1;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.edit-btn,
+.delete-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+
+    border:none;
+    border-radius:10px;
+    padding:9px 15px;
+
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.edit-btn{
+    background:#e94804;
+    color:#fff;
+    box-shadow:0 3px 10px rgba(233,72,4,.25);
+}
+
+.edit-btn:hover{
+    background:#c63d02;
+    transform:translateY(-2px);
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+    box-shadow:0 3px 10px rgba(220,53,69,.25);
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+    transform:translateY(-2px);
+}
+
+.article-table td:last-child{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.article-empty{
+    text-align:center;
+    padding:40px;
+    color:#888;
+    font-size:15px;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+#articleModal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#articleModal .modal-content{
+    width:650px;
+    max-width:95%;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.20);
+    animation:articleModal .25s ease;
+}
+
+@keyframes articleModal{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+#articleModal .modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 25px;
+    background:#101820;
+    color:#fff;
+}
+
+#articleModal .modal-header h3{
+    margin:0;
+    font-size:22px;
+}
+
+#articleModal .close{
+    font-size:28px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#articleModal .close:hover{
+    color:#e94804;
+}
+
+#articleModal form{
+    padding:25px;
+}
+
+#articleModal .modal-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+#articleModal .form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+#articleModal .form-group:last-child{
+    grid-column:1 / -1;
+}
+
+#articleModal label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#101820;
+}
+
+#articleModal input,
+#articleModal select,
+#articleModal textarea{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #dcdcdc;
+    border-radius:8px;
+    font-size:14px;
+    transition:.3s;
+}
+
+#articleModal textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+#articleModal input:focus,
+#articleModal select:focus,
+#articleModal textarea:focus{
+    outline:none;
+    border-color:#e94804;
+    box-shadow:0 0 0 4px rgba(233,72,4,.12);
+}
+
+/* ==========================================
+   MODAL BUTTONS
+========================================== */
+
+#articleModal .modal-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+    margin-top:25px;
+}
+
+#articleModal .cancel-btn{
+    background:#f3f4f6;
+    color:#333;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#articleModal .cancel-btn:hover{
+    background:#dcdcdc;
+}
+
+#articleModal .save-btn{
+    background:#e94804;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+#articleModal .save-btn:hover{
+    background:#c73d03;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .card-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    #searchArticle{
+        width:100%;
+    }
+
+    .article-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+@media(max-width:768px){
+
+    #articleModal .modal-content{
+        width:95%;
+    }
+
+    #articleModal .modal-grid{
+        grid-template-columns:1fr;
+    }
+
+    #articleModal .form-group:last-child{
+        grid-column:auto;
+    }
+
+}

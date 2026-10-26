@@ -1,0 +1,354 @@
+/*=====================================================
+  REPORTS MODULE
+=====================================================*/
+
+/* ===========================
+   HEADER
+=========================== */
+
+.reports-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.reports-header h2{
+    font-size:30px;
+    color:#101820;
+}
+
+.reports-header p{
+    margin-top:6px;
+    color:#6b7280;
+}
+
+/* Export Buttons */
+
+.report-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.report-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:12px 22px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#101820;
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.report-btn:hover{
+    background:#e94804;
+    transform:translateY(-2px);
+    box-shadow:0 10px 22px rgba(233,72,4,.25);
+}
+
+/* Secondary Button */
+
+.report-btn.secondary{
+    background:#f3f4f6;
+    color:#101820;
+}
+
+.report-btn.secondary:hover{
+    background:#e5e7eb;
+    color:#101820;
+}
+
+/* ===========================
+   REPORT SUMMARY CARDS
+=========================== */
+
+.report-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.report-card{
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+
+    padding:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.report-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+.report-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:6px;
+    height:100%;
+    background:#e94804;
+}
+
+.report-card h3{
+    font-size:42px;
+    font-weight:700;
+    color:#101820;
+    margin-bottom:8px;
+}
+
+.report-card p{
+    color:#6b7280;
+    font-size:15px;
+}
+
+/* Optional Trend */
+
+.report-card small{
+    display:block;
+    margin-top:10px;
+    color:#9ca3af;
+}
+
+/* ===========================
+   REPORT SECTIONS
+=========================== */
+
+.report-section{
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+
+    overflow:hidden;
+
+    margin-bottom:30px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.report-section h3{
+    background:#101820;
+    color:#fff;
+
+    padding:18px 25px;
+
+    font-size:18px;
+    font-weight:600;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.report-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.report-table thead{
+    background:#f8fafc;
+}
+
+.report-table th{
+    padding:15px;
+    text-align:left;
+
+    font-size:14px;
+    font-weight:700;
+
+    color:#101820;
+
+    border-bottom:1px solid #e5e7eb;
+}
+
+.report-table td{
+    padding:15px;
+    border-bottom:1px solid #eef2f7;
+    color:#4b5563;
+}
+
+.report-table tbody tr{
+    transition:.25s;
+}
+
+.report-table tbody tr:hover{
+    background:#fafafa;
+}
+
+.report-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+/* ===========================
+   STATUS BADGES
+=========================== */
+
+.report-table .status{
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    color:#fff;
+
+    font-size:12px;
+    font-weight:600;
+}
+
+.status.pending{
+    background:#f59e0b;
+}
+
+.status.approved{
+    background:#3b82f6;
+}
+
+.status.borrowed{
+    background:#10b981;
+}
+
+.status.returned{
+    background:#16a34a;
+}
+
+.status.completed{
+    background:#101820;
+}
+
+.status.rejected{
+    background:#ef4444;
+}
+
+.status.lost{
+    background:#7f1d1d;
+}
+
+.status.damaged{
+    background:#9333ea;
+}
+
+/* ===========================
+   REPORT FILTER BAR
+=========================== */
+
+.report-filter{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    flex-wrap:wrap;
+
+    margin-bottom:25px;
+}
+
+.report-filter input,
+.report-filter select{
+    padding:12px 15px;
+
+    border:1px solid #d1d5db;
+    border-radius:10px;
+
+    background:#fff;
+
+    transition:.3s;
+}
+
+.report-filter input:focus,
+.report-filter select:focus{
+    outline:none;
+    border-color:#e94804;
+    box-shadow:0 0 0 3px rgba(233,72,4,.15);
+}
+
+/* ===========================
+   PRINT MODE
+=========================== */
+
+@media print{
+
+    .sidebar,
+    .topbar,
+    .report-actions,
+    .report-filter{
+        display:none !important;
+    }
+
+    body{
+        background:#fff;
+    }
+
+    .report-card,
+    .report-section{
+        box-shadow:none;
+        border:1px solid #ccc;
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    .report-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .reports-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .report-filter{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .report-filter input,
+    .report-filter select{
+        width:100%;
+    }
+
+    .report-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .report-cards{
+        grid-template-columns:1fr;
+    }
+
+}

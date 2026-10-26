@@ -1,0 +1,282 @@
+/*=====================================================
+  DICT IMS
+  BASE CSS
+=====================================================*/
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   ROOT VARIABLES
+========================== */
+
+:root{
+
+    /* Theme */
+    --primary:#101820;
+    --secondary:#e94804;
+
+    /* Background */
+    --white:#ffffff;
+    --bg:#f5f7fb;
+    --card:#ffffff;
+
+    /* Text */
+    --text:#1f2937;
+    --muted:#6b7280;
+
+    /* Border */
+    --border:#e7edf5;
+
+    /* Radius */
+    --radius:18px;
+
+    /* Shadow */
+    --shadow:0 8px 30px rgba(15,23,42,.08);
+
+    /* Animation */
+    --transition:.3s;
+
+}
+
+/* ==========================
+   BODY
+========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ==========================
+   LISTS
+========================== */
+
+ul,
+ol{
+    list-style:none;
+}
+
+/* ==========================
+   IMAGES
+========================== */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+    font-family:inherit;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:var(--primary);
+    font-weight:700;
+}
+
+p{
+    color:var(--muted);
+}
+
+/* ==========================
+   PAGE TRANSITION
+========================== */
+
+.page{
+    animation:fadePage .25s ease;
+}
+
+@keyframes fadePage{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   POPUP ANIMATION
+========================== */
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:translateY(-25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   ARTICLE MODAL ANIMATION
+========================== */
+
+@keyframes articleModal{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#c8c8c8;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#9e9e9e;
+}
+
+/* ==========================
+   UTILITIES
+========================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.show{
+    display:block !important;
+}
+
+.flex{
+    display:flex;
+}
+
+.grid{
+    display:grid;
+}
+
+.w-100{
+    width:100%;
+}
+
+.h-100{
+    height:100%;
+}
+
+.mt-10{
+    margin-top:10px;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mt-30{
+    margin-top:30px;
+}
+
+.mb-10{
+    margin-bottom:10px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+.mb-30{
+    margin-bottom:30px;
+}
+
+.rounded{
+    border-radius:var(--radius);
+}
+
+.shadow{
+    box-shadow:var(--shadow);
+}
+
+.transition{
+    transition:var(--transition);
+}
